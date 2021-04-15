@@ -53,7 +53,7 @@ calculate_texture_size(std::list<TexturePatch::ConstPtr> const & texture_patches
             unsigned int waste = area - texture_patch->get_size();
 
             /* Only consider patches where the information dominates padding. */
-            if (static_cast<double>(waste) / texture_patch->get_size() > 1.0) {
+            if (static_cast<double>(waste) / texture_patch->get_size() > 10.0) {
                 /* Since the patches are sorted by size we can assume that only
                  * few further patches will contribute to the size and break. */
                 break;
